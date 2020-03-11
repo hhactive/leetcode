@@ -1,0 +1,16 @@
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        cm=s.count('CM')
+        cd=s.count('CD')
+        xc=s.count('XC')
+        xl=s.count('XL')
+        iv=s.count('IV')
+        ix=s.count('IX')
+        m=s.count('M')
+        d=s.count('D')
+        c=s.count('C')
+        l=s.count('L')
+        x=s.count('X')
+        v=s.count('V')
+        i=s.count('I')
+        return m*1000+d*500+c*100+l*50+x*10+v*5+i-2*((cm+cd)*100+(xl+xc)*10+iv+ix)
